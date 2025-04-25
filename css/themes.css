@@ -131,6 +131,27 @@ body {
   outline-offset: 2px;
 }
 
+/* Animate theme icon when toggling */
+.theme-icon-animate {
+  animation: icon-spin-fade 0.5s ease forwards;
+}
+
+/* Keyframes: tiny spin + fade */
+@keyframes icon-spin-fade {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(20deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
 /* Media query for prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {

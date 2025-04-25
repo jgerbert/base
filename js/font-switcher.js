@@ -5,10 +5,6 @@
 
 (function () {
   const htmlEl = document.documentElement;
-  const fontSwitcher = document.getElementById('font-pairing-select');
-  const fontPreview = document.getElementById('font-pairing-preview');
-  const toggleFontPreview = document.getElementById('toggle-font-preview');
-
   const STORAGE_KEY = 'preferred-font-pairing';
   const LINK_ID = 'dynamic-fonts-live';
 
@@ -22,7 +18,10 @@
       document.head.appendChild(link);
     }
 
-    const families = [heading, body].map(f => f.trim().replace(/ /g, '+')).join('&family=');
+    const families = [heading, body]
+      .map(f => f.trim().replace(/ /g, '+'))
+      .join('&family=');
+
     link.href = `https://fonts.googleapis.com/css2?family=${families}&display=swap`;
 
     htmlEl.style.setProperty('--font-heading', `'${heading}', serif`);
@@ -44,19 +43,20 @@
     return localStorage.getItem(STORAGE_KEY) || 'EB Garamond|Plus Jakarta Sans';
   };
 
-  // Initialize pairing on load
+  // Initialize logic after DOM is ready
   const initFontSwitcher = () => {
+    const fontSwitcher = document.getElementById('font-pairing-select');
+    const fontPreview = document.getElementById('font-pairing-preview');
+    const toggleFontPreview = document.getElementById('toggle-font-preview');
+
     const savedValue = getStoredPairing();
 
-    // Update select if available
-    if (fontSwitcher) fontSwitcher.value = savedValue;
-
-    // Apply saved fonts
-    const [heading, body] = parsePair(savedValue);
-    applyFontPairing(heading, body);
-
-    // Listen to changes
     if (fontSwitcher) {
+      fontSwitcher.value = savedValue;
+
+      const [heading, body] = parsePair(savedValue);
+      applyFontPairing(heading, body);
+
       fontSwitcher.addEventListener('change', (e) => {
         const value = e.target.value;
         if (value === 'custom') {
@@ -70,7 +70,6 @@
       });
     }
 
-    // Handle collapsible toggle
     if (toggleFontPreview && fontPreview) {
       toggleFontPreview.addEventListener('click', () => {
         const isVisible = !fontPreview.hidden;
@@ -78,9 +77,14 @@
         toggleFontPreview.textContent = isVisible ? 'Customize Fonts' : 'Hide Font Preview';
       });
     }
+
+    // If pairing exists but no switcher rendered, still apply font
+    if (!fontSwitcher && savedValue) {
+      const [heading, body] = parsePair(savedValue);
+      applyFontPairing(heading, body);
+    }
   };
 
-  // DOM Ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initFontSwitcher);
   } else {

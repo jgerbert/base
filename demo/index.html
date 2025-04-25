@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typography-First Website Template - Demo</title>
   <link rel="stylesheet" href="../css/style.css">
-  <!-- Google Fonts for Playfair Display and Plus Jakarta Sans -->
+  <!-- Google Fonts (curated pairings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;700&family=Inter:wght@300;400;500;700&family=Fraunces:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;700&family=Outfit:wght@300;400;500;700&family=DM+Serif+Display:wght@400&family=Cormorant+Garamond:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600&family=Marcellus&family=Noto+Sans:wght@400;500;700&family=Manrope:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;700&family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital,wght@0,400&family=Inter:wght@300;400;500;700&family=Merriweather:wght@300;400;700&family=Work+Sans:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;700&family=Raleway:wght@400;500;700&family=Lora:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600&family=Vollkorn:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="container py-4">
-    <div class="toolbar">
+    <nav class="toolbar" aria-label="Font Tools">
       <div class="font-switcher-controls">
         <button id="toggle-font-preview" class="btn btn-outline-sm">Customize Fonts</button>
         <div id="font-pairing-preview" hidden>
@@ -27,7 +27,7 @@
           </select>
         </div>
       </div>
-    </div>
+    </nav>
   
     <h1 class="site-title">Typography-First Template</h1>
   </header>
@@ -346,12 +346,16 @@
     </section>
   </main>
 
-  <footer class="container py-4 mt-4">
-    <hr>
-    <div class="text-center my-3">
-      <p>&copy; 2025 Typography-First Template. Built with semantic HTML and custom CSS.</p>
-    </div>
-  </footer>
+<footer class="container py-4 mt-4">
+  <hr>
+  <div class="text-center my-3">
+    <p>&copy; 2025 Typography-First Template. Built with semantic HTML and custom CSS.</p>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </div>
+</footer>
+
 
   <!-- Theme toggle button -->
   <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -359,9 +363,9 @@
   </button>
 
   <!-- JavaScript -->
-  <script src="../js/theme-toggle.js"></script>
-  <script src="../js/font-switcher.js"></script>
-  <script src="../js/modal.js"></script>
+  <script src="../js/theme-toggle.js" defer></script>
+  <script src="../js/font-switcher.js" defer></script>
+  <script src="../js/modal.js" defer></script>
   
 </body>
 </html>

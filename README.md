@@ -1,114 +1,140 @@
 # Typography-First Website Template
 
-A handcrafted, modern website template designed with a strong focus on typography, modular layout, visual clarity, and performance. Built from the ground up with semantic HTML, logical class-based CSS, and custom design tokens—this template avoids framework bloat while adhering to responsive design and accessibility standards.
+[Live Demo](https://stokewell.github.io/base/demo/) · [Use this Template](https://github.com/stokewell/base/generate)
 
-## Typography System
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Responsive](https://img.shields.io/badge/responsive-yes-brightgreen)
+![Status](https://img.shields.io/badge/status-template--ready-blueviolet)
 
-This template features a sophisticated typography system using a high-end Google Fonts pairing:
+A handcrafted, modern website starter built with a strong focus on **typography**, **modular layout**, **visual clarity**, and **performance**.  
+No framework bloat — just semantic HTML, custom design tokens, and clean CSS structured for elegance and reuse.
 
-- **Headings:** [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) - An elegant serif typeface with beautiful contrast and classical proportions
-- **Body:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) - A versatile, modern sans-serif with excellent readability and comprehensive multilingual support
+## 👤 Who It's For
 
-This pairing creates a sophisticated, professional aesthetic suitable for design agencies, studios, and creative businesses while maintaining excellent readability and accessibility.
+This template is ideal for:
 
-## Core Design Goals
+- Designers and developers building typographically expressive websites
+- Studios and agencies seeking high-end presentation without extra frameworks
+- Creators who value performance, clarity, and maintainability
+- Anyone tired of overengineered boilerplates
 
-- **Typography-first** philosophy rooted in journalistic standards (optimal line-length, vertical rhythm, fluid scale).
-- **Responsive design** from **360px (mobile)** to **1920px+ (desktop)** using fluid containers and adaptive breakpoints.
-- **Built-in Light/Dark Mode** with both `prefers-color-scheme` and a manual override toggle.
-- **Grid-aligned vertical and horizontal layout**, locked to a base spacing unit (8px baseline).
-- **Logical, minimal class structure**—not class-less, but sensibly classed and reusable.
-- **No framework dependencies**—CSS is fully custom and cleanly organized.
-- **Robust design token system** used throughout for consistency and easy customization.
-- **Accessibility-first (a11y)** with WCAG 2.1 AA compliance.
-- **Minimal JavaScript**, limited to essential interactivity only (theme switching, modals, etc.).
+## ✍️ Typography System
 
-## Project Folder Structure
+Uses a carefully curated Google Fonts pairing:
+
+- **Headings:** [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)  → Elegant serif with strong contrast and classical proportions
+- **Body:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)  → Clean, modern sans-serif optimized for legibility and multilingual content
+
+## 🛠️ Core Design Goals
+
+- **Typography-first** layout with fluid rhythm, optimal line length, and scale
+- **Responsive design** from 360px to 1920px+
+- **Built-in Light/Dark Mode**, using `prefers-color-scheme` + manual toggle
+- **Modular layout utilities**, grid/flex locked to an 8px baseline
+- **Minimal, reusable classes** — no utility clutter or third-party dependencies
+- **Design tokens** for color, spacing, typography, transitions, and more
+- **Accessibility-first (WCAG 2.1 AA)** — keyboard nav, contrast, ARIA
+- **Minimal JavaScript** — just enough for interactivity, no framework overhead
+
+## 📂 Folder Structure
 
 ```
 /typography-first-template/
 ├── /css/
-│   ├── tokens.css         # Design tokens (spacing, colors, fonts, z-index, transitions, etc.)
-│   ├── reset.css          # CSS reset
-│   ├── base.css           # Typography, headings, body styles, media, etc.
-│   ├── modules.css        # Layout utilities (grid, flex) and all component classes
-│   ├── themes.css         # Light/dark mode variables and overrides
-│   └── style.css          # Main entry that imports all CSS files in order
+│   ├── tokens.css         # Design tokens: spacing, colors, typography, z-index, etc.
+│   ├── reset.css          # CSS reset (or normalize)
+│   ├── base.css           # Core styles: typography, layout scaffolding
+│   ├── modules.css        # Reusable utilities: grid, flexbox, components
+│   ├── themes.css         # Light/dark theme variables & overrides
+│   └── style.css          # Entrypoint file importing all others in order
 │
 ├── /js/
-│   ├── theme-toggle.js    # Light/dark mode toggle with localStorage support
-│   └── modal.js           # Minimal JS for modal/accordion functionality
+│   ├── theme-toggle.js    # Theme switcher with localStorage
+│   └── modal.js           # Minimal modals or accordion behavior
 │
 ├── /demo/
-│   └── index.html         # A complete showcase of all styles, tokens, layouts, and components
+│   └── index.html         # Showcase of all styles, tokens, layout, and components
 │
-└── README.md              # Framework overview, usage instructions, and customization guide
+└── README.md              # You're here
 ```
 
-## Usage Instructions
+## ⚙️ Usage Instructions
 
-1. Include the CSS file in your HTML:
-   ```html
-   <link rel="stylesheet" href="css/style.css">
-   ```
+### 1. Include styles and scripts
 
-2. Include the JavaScript files at the end of your HTML document:
-   ```html
-   <script src="js/theme-toggle.js"></script>
-   <script src="js/modal.js"></script>
-   ```
+In your `<head>`:
 
-3. Add the theme toggle button to your HTML:
-   ```html
-   <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-     <span id="theme-icon">🌙</span>
-   </button>
-   ```
+```html
+<link rel="stylesheet" href="css/style.css">
+```
 
-4. View the demo page at `/demo/index.html` for examples of all components and styles.
+At the end of your `<body>`:
 
-## Customization
+```html
+<script src="js/theme-toggle.js"></script>
+<script src="js/modal.js"></script>
+```
 
-### Modifying Design Tokens
+### 2. Add the theme toggle (optional)
 
-To customize the appearance of your site, edit the variables in `tokens.css`. This includes:
+```html
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <span id="theme-icon">🌙</span>
+</button>
+```
+
+### 3. Explore the demo
+
+Open [`/demo/index.html`](https://jgerbert.github.io/base/demo/) to preview all tokens, layouts, and components in action.
+
+## 🧹 Customization Guide
+
+### Modify Design Tokens
+
+Edit `css/tokens.css` to change:
 
 - Spacing scale
-- Typography (fonts, sizes, line heights)
-- Colors
-- Z-index values
-- Transitions
+- Color scheme
+- Font stack and sizing
+- Z-index layers
+- Transition timing
 
-### Adding Custom Components
+### Add Custom Components
 
-1. Define your component styles in `modules.css`
-2. Use the existing design tokens for consistency
-3. Follow the established class naming patterns
+1. Define styles in `modules.css`
+2. Use variables from `tokens.css` for alignment
+3. Match the naming pattern of existing utilities
 
-### Theme Customization
+### Customize Themes
 
-To add or modify themes:
+1. Modify or extend `css/themes.css`
+2. Add `[data-theme="your-theme-name"]` blocks
+3. Control theme via JS or `prefers-color-scheme`
 
-1. Edit the variables in `themes.css`
-2. Add new theme variations with the `[data-theme="your-theme-name"]` selector
+## ♿ Accessibility Features
 
-## Accessibility Features
+- Semantic HTML throughout
+- Keyboard-friendly navigation
+- Focus styles for all interactives
+- ARIA attributes where needed
+- Respects `prefers-reduced-motion`
+- Meets or exceeds WCAG 2.1 AA contrast standards
 
-- Semantic HTML structure
-- Keyboard navigation support
-- Focus management for interactive elements
-- ARIA attributes where appropriate
-- Color contrast meeting WCAG 2.1 AA standards
-- Support for prefers-reduced-motion
+## 🌐 Browser Support
 
-## Browser Support
+Tested in all modern evergreen browsers:
 
-This template supports all modern browsers including:
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-## License
+## 📄 License
 
-This template is available under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
+
+## 🔮 Use as a Template
+
+Want to start your next project with this foundation?
+
+→ [Click here to generate your own copy](https://github.com/stokewell/base/generate)

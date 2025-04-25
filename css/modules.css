@@ -499,3 +499,19 @@ body.show-grid::after {
   pointer-events: none;
   z-index: 9999;
 }
+
+/* ============================================
+   Font pairing options 
+   ============================================ */
+
+#font-pairing-wrapper {
+  max-width: 300px;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  #font-pairing-wrapper {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

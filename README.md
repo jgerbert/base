@@ -20,10 +20,16 @@ This template is ideal for:
 
 ## ✍️ Typography System
 
-Uses a carefully curated Google Fonts pairing:
+This template includes a flexible typography system with an optional starter pairing:
 
-- **Headings:** [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)  → Elegant serif with strong contrast and classical proportions
-- **Body:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)  → Clean, modern sans-serif optimized for legibility and multilingual content
+- **Headings** — [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)
+- **Body** — [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+
+Fonts are easily configurable using CSS variables (`--font-heading`, `--font-body`).
+
+An optional built-in **font pairing preview tool** is included to experiment with alternative combinations before committing changes.
+
+To change fonts permanently, update the `--font-heading` and `--font-body` variables in `tokens.css`.
 
 ## 🛠️ Core Design Goals
 

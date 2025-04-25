@@ -15,22 +15,25 @@
     <div class="flex justify-between items-center">
       <h1>Typography-First Template</h1>
       <div class="flex gap-2">
-        <select id="font-switcher" class="form-control" aria-label="Change font pairing">
-          <option value="default">Playfair & Jakarta</option>
-          <option value="secondary">DM Serif & Work Sans</option>
-          <option value="tertiary">Fraunces & Inter</option>
-          <option value="quaternary">Montserrat & Outfit</option>
-          <option value="quinary">EB Garamond Only</option>
-          <option value="senary">Cormorant & Source Sans</option>
-          <option value="septenary">Marcellus & Noto Sans</option>
-          <option value="octonary">DM Serif & Manrope</option>
-          <optgroup label="Use Case Specific">
-            <option value="nonary">Poppins & Open Sans (Tech)</option>
-            <option value="denary">Lora & Merriweather (Editorial)</option>
-            <option value="undenary">Syne & Space Grotesk (Creative)</option>
-            <option value="duodenary">Tenor Sans & Cormorant (Fashion)</option>
-          </optgroup>
-        </select>
+        <!-- Responsive Font Pairing Panel (Collapsible inside Header) -->
+        <div id="font-pairing-wrapper" style="width: 100%;">
+          <button id="toggle-font-preview" class="btn" style="margin-bottom: 0.5rem;">
+            Customize Fonts
+          </button>
+        
+          <div id="font-pairing-preview" hidden style="padding: 1rem; border: 1px solid var(--color-subtle); border-radius: 4px;">
+            <label for="font-pairing-select" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Font Pairing</label>
+            <select id="font-pairing-select" style="width: 100%; max-width: 100%; padding: 0.5rem; font-size: 1rem; border: 1px solid var(--color-subtle); border-radius: 4px;">
+              <option value="EB Garamond|Plus Jakarta Sans" selected>EB Garamond + Plus Jakarta Sans</option>
+              <option value="DM Serif Display|Inter">DM Serif Display + Inter</option>
+              <option value="Merriweather|Work Sans">Merriweather + Work Sans</option>
+              <option value="Cormorant Garamond|Raleway">Cormorant Garamond + Raleway</option>
+              <option value="Lora|Source Sans Pro">Lora + Source Sans Pro</option>
+              <option value="Vollkorn|Noto Sans">Vollkorn + Noto Sans</option>
+              <option value="custom">Custom Fonts…</option>
+            </select>
+          </div>
+        </div>
         <button class="btn" id="grid-toggle">Toggle Grid</button>
       </div>
     </div>

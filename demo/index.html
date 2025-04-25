@@ -12,30 +12,26 @@
 </head>
 <body>
   <header class="container py-4">
-    <div class="flex justify-between items-center">
-      <h1>Typography-First Template</h1>
-      <div class="flex gap-2">
-        <!-- Responsive Font Pairing Panel (Collapsible inside Header) -->
-        <div id="font-pairing-wrapper" style="width: 100%;">
-          <button id="toggle-font-preview" class="btn" style="margin-bottom: 0.5rem;">
-            Customize Fonts
-          </button>
-        
-          <div id="font-pairing-preview" hidden style="padding: 1rem; border: 1px solid var(--color-subtle); border-radius: 4px;">
-            <label for="font-pairing-select" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Font Pairing</label>
-            <select id="font-pairing-select" style="width: 100%; max-width: 100%; padding: 0.5rem; font-size: 1rem; border: 1px solid var(--color-subtle); border-radius: 4px;">
-              <option value="EB Garamond|Plus Jakarta Sans" selected>EB Garamond + Plus Jakarta Sans</option>
-              <option value="DM Serif Display|Inter">DM Serif Display + Inter</option>
-              <option value="Merriweather|Work Sans">Merriweather + Work Sans</option>
-              <option value="Cormorant Garamond|Raleway">Cormorant Garamond + Raleway</option>
-              <option value="Lora|Source Sans Pro">Lora + Source Sans Pro</option>
-              <option value="Vollkorn|Noto Sans">Vollkorn + Noto Sans</option>
-            </select>
-          </div>
+    <div class="toolbar">
+      <div class="font-switcher-controls">
+        <button id="toggle-font-preview" class="btn btn-outline-sm">Customize Fonts</button>
+        <div id="font-pairing-preview" hidden>
+          <label for="font-pairing-select">Font Pairing</label>
+          <select id="font-pairing-select">
+            <option value="EB Garamond|Plus Jakarta Sans" selected>EB Garamond + Plus Jakarta Sans</option>
+            <option value="DM Serif Display|Inter">DM Serif Display + Inter</option>
+            <option value="Merriweather|Work Sans">Merriweather + Work Sans</option>
+            <option value="Cormorant Garamond|Raleway">Cormorant Garamond + Raleway</option>
+            <option value="Lora|Source Sans Pro">Lora + Source Sans Pro</option>
+            <option value="Vollkorn|Noto Sans">Vollkorn + Noto Sans</option>
+          </select>
         </div>
       </div>
     </div>
+  
+    <h1 class="site-title">Typography-First Template</h1>
   </header>
+  
 
   <main class="container">
     <section class="my-4">

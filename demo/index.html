@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography-First Website Template - Demo</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Google Fonts for Playfair Display and Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;700&family=Inter:wght@300;400;500;700&family=Fraunces:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;700&family=Outfit:wght@300;400;500;700&family=DM+Serif+Display:wght@400&family=Cormorant+Garamond:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600&family=Marcellus&family=Noto+Sans:wght@400;500;700&family=Manrope:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;700&family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="container py-4">
+    <div class="flex justify-between items-center">
+      <h1>Typography-First Template</h1>
+      <div class="flex gap-2">
+        <select id="font-switcher" class="form-control" aria-label="Change font pairing">
+          <option value="default">Playfair & Jakarta</option>
+          <option value="secondary">DM Serif & Work Sans</option>
+          <option value="tertiary">Fraunces & Inter</option>
+          <option value="quaternary">Montserrat & Outfit</option>
+          <option value="quinary">EB Garamond Only</option>
+          <option value="senary">Cormorant & Source Sans</option>
+          <option value="septenary">Marcellus & Noto Sans</option>
+          <option value="octonary">DM Serif & Manrope</option>
+          <optgroup label="Use Case Specific">
+            <option value="nonary">Poppins & Open Sans (Tech)</option>
+            <option value="denary">Lora & Merriweather (Editorial)</option>
+            <option value="undenary">Syne & Space Grotesk (Creative)</option>
+            <option value="duodenary">Tenor Sans & Cormorant (Fashion)</option>
+          </optgroup>
+        </select>
+        <button class="btn" id="grid-toggle">Toggle Grid</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="my-4">
+      <h2>About This Template</h2>
+      <p>This is a handcrafted, modern website template designed with a strong focus on typography, modular layout, visual clarity, and performance. Built from the ground up with semantic HTML, logical class-based CSS, and custom design tokens—this template avoids framework bloat while adhering to responsive design and accessibility standards.</p>
+      
+      <div class="alert alert-success my-3">
+        <strong>Tip:</strong> Use the theme toggle button in the bottom-right corner to switch between light and dark mode.
+      </div>
+    </section>
+
+    <section class="my-4">
+      <h2>Typography</h2>
+      <div class="grid-2 my-3">
+        <div>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+        <div>
+          <p>This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, and <a href="#">a hyperlink</a>. The base font is Plus Jakarta Sans, which provides excellent readability for body text. Headings use Playfair Display, an elegant serif typeface.</p>
+          
+          <p>Line length is limited to <code>65ch</code> for optimal readability, and line height is set to <code>1.5</code> to provide comfortable vertical rhythm.</p>
+          
+          <blockquote>
+            "Typography is what language looks like."<br>— Ellen Lupton
+          </blockquote>
+          
+          <p>Here's a keyboard shortcut: press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
+          
+          <p>Here's some <code>inline code</code> and a <mark>highlighted text</mark>.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Lists</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Unordered List</h3>
+          <ul>
+            <li>Item one</li>
+            <li>Item two with <a href="#">a link</a></li>
+            <li>Item three
+              <ul>
+                <li>Nested item one</li>
+                <li>Nested item two</li>
+              </ul>
+            </li>
+            <li>Item four</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ordered List</h3>
+          <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item
+              <ol>
+                <li>Nested ordered item</li>
+                <li>Another nested item</li>
+              </ol>
+            </li>
+            <li>Fourth item</li>
+          </ol>
+        </div>
+      </div>
+      
+      <div class="my-3">
+        <h3>Definition List</h3>
+        <dl>
+          <dt>Typography</dt>
+          <dd>The art and technique of arranging type to make written language legible, readable, and appealing.</dd>
+          
+          <dt>Vertical Rhythm</dt>
+          <dd>A consistent vertical spacing between elements on a page, creating a sense of harmony and balance.</dd>
+          
+          <dt>Design Tokens</dt>
+          <dd>Named values that form the smallest pieces of a design system, such as colors, spacing, and typography values.</dd>
+        </dl>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Buttons</h2>
+      <div class="flex gap-2 flex-wrap my-3">
+        <button class="btn">Primary Button</button>
+        <button class="btn-secondary">Secondary Button</button>
+        <button class="btn-outline">Outline Button</button>
+        <button class="btn-contrast">Contrast Button</button>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Form Elements</h2>
+      <form class="my-3">
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="John Doe">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="john@example.com">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4" placeholder="Your message here..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="options" class="form-label">Options</label>
+          <select id="options" class="form-control">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+        
+        <div class="my-3">
+          <div class="form-check">
+            <input type="checkbox" id="checkbox1" class="form-check-input">
+            <label for="checkbox1" class="form-check-label">I agree to the terms</label>
+          </div>
+          
+          <div class="form-check">
+            <input type="radio" id="radio1" name="radios" class="form-check-input">
+            <label for="radio1" class="form-check-label">Option A</label>
+          </div>
+          
+          <div class="form-check">
+            <input type="radio" id="radio2" name="radios" class="form-check-input">
+            <label for="radio2" class="form-check-label">Option B</label>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+    
+    <section class="my-4">
+      <h2>Alerts</h2>
+      <div class="my-3">
+        <div class="alert alert-success">
+          <strong>Success!</strong> Your changes have been saved.
+        </div>
+        
+        <div class="alert alert-warning">
+          <strong>Warning!</strong> This action cannot be undone.
+        </div>
+        
+        <div class="alert alert-error">
+          <strong>Error!</strong> Something went wrong. Please try again.
+        </div>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Cards</h2>
+      <div class="grid-3 my-3">
+        <div class="card">
+          <h3 class="card-title">Card Title</h3>
+          <p>This is a simple card with some text content. Cards can be used to group related information.</p>
+        </div>
+        
+        <div class="card">
+          <div class="aspect-ratio">
+            <img src="https://picsum.photos/seed/picsum/600/400" alt="Sample image" class="media-cover">
+          </div>
+          <h3 class="card-title mt-3">Card with Image</h3>
+          <p>This card includes an image with a 16:9 aspect ratio.</p>
+        </div>
+        
+        <div class="card">
+          <h3 class="card-title">Interactive Card</h3>
+          <p>Cards have hover effects built in. Try hovering over this card to see it in action.</p>
+          <div class="card-footer">
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Tables</h2>
+      <div class="table-responsive my-3">
+        <table class="table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Designer</td>
+              <td>UI/UX</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Developer</td>
+              <td>Engineering</td>
+            </tr>
+            <tr>
+              <td>Robert Johnson</td>
+              <td>Manager</td>
+              <td>Operations</td>
+            </tr>
+            <tr>
+              <td>Emily Davis</td>
+              <td>Writer</td>
+              <td>Content</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Grid Layout</h2>
+      <div class="my-3">
+        <h3>Two Columns</h3>
+        <div class="grid grid-2">
+          <div class="card">Column 1</div>
+          <div class="card">Column 2</div>
+        </div>
+      </div>
+      
+      <div class="my-3">
+        <h3>Three Columns</h3>
+        <div class="grid grid-3">
+          <div class="card">Column 1</div>
+          <div class="card">Column 2</div>
+          <div class="card">Column 3</div>
+        </div>
+      </div>
+      
+      <div class="my-3">
+        <h3>Four Columns</h3>
+        <div class="grid grid-4">
+          <div class="card">Column 1</div>
+          <div class="card">Column 2</div>
+          <div class="card">Column 3</div>
+          <div class="card">Column 4</div>
+        </div>
+      </div>
+      
+      <div class="my-3">
+        <h3>Auto Fit Grid</h3>
+        <div class="grid grid-auto">
+          <div class="card">Column 1</div>
+          <div class="card">Column 2</div>
+          <div class="card">Column 3</div>
+          <div class="card">Column 4</div>
+          <div class="card">Column 5</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Modal Example</h2>
+      <button class="btn" data-modal-target="demo-modal">Open Modal</button>
+      
+      <div id="demo-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <div class="modal-content">
+          <button class="modal-close" data-modal-close aria-label="Close modal">&times;</button>
+          <h2 id="modal-title">Modal Title</h2>
+          <p>This is a modal dialog window. It's centered on the screen and can be closed by clicking the X button, pressing Escape, or clicking outside the modal.</p>
+          <p>Modals trap focus for better accessibility, ensuring keyboard users can navigate within the modal without accidentally focusing on elements outside it.</p>
+          <button class="btn mt-3" data-modal-close>Close Modal</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="my-4">
+      <h2>Accordion Example</h2>
+      <details class="my-3">
+        <summary>What is a typography-first approach?</summary>
+        <div>
+          <p>A typography-first approach prioritizes text readability and hierarchy in design. It starts with establishing a solid typographic foundation before adding other design elements. This approach ensures content is legible, accessible, and properly structured.</p>
+        </div>
+      </details>
+      
+      <details class="my-3">
+        <summary>How do design tokens help with consistency?</summary>
+        <div>
+          <p>Design tokens are named variables that store design decisions like colors, spacing, and typography values. By using tokens instead of hardcoded values, you ensure consistency throughout your design and make it easier to update the design system as a whole.</p>
+        </div>
+      </details>
+      
+      <details class="my-3">
+        <summary>What are the benefits of a custom CSS approach over frameworks?</summary>
+        <div>
+          <p>Custom CSS offers several advantages:</p>
+          <ul>
+            <li>Smaller file sizes and faster loading</li>
+            <li>No unnecessary styles or components</li>
+            <li>Complete control over design decisions</li>
+            <li>Better understanding of the codebase</li>
+            <li>No framework-specific class naming conventions</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="container py-4 mt-4">
+    <hr>
+    <div class="text-center my-3">
+      <p>&copy; 2025 Typography-First Template. Built with semantic HTML and custom CSS.</p>
+    </div>
+  </footer>
+
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <span id="theme-icon">🌙</span>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="../js/theme-toggle.js"></script>
+  <script src="../js/font-switcher.js"></script>
+  <script src="../js/modal.js"></script>
+  
+  <!-- Grid Toggle Script -->
+  <script>
+    document.getElementById('grid-toggle').addEventListener('click', function() {
+      document.body.classList.toggle('show-grid');
+    });
+  </script>
+</body>
+</html>

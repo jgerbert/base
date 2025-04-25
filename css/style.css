@@ -1,0 +1,53 @@
+/* Main entry file that imports all CSS files in order */
+
+@import url('tokens.css');
+@import url('reset.css');
+@import url('base.css');
+@import url('modules.css');
+@import url('themes.css');
+
+/* 
+   Typography-First Website Template
+   A handcrafted, modern website template focused on 
+   typography, modular layout, visual clarity, and performance.
+   Built with semantic HTML, logical CSS, and custom design tokens.
+*/
+
+/* Print styles */
+@media print {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .theme-toggle,
+  .modal,
+  button:not(.print-button),
+  .no-print {
+    display: none !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p, blockquote, table, ul, ol, dl {
+    page-break-inside: avoid;
+  }
+}

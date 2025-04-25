@@ -1,0 +1,101 @@
+/* Design tokens */
+
+/* Spacing and Rhythm */
+:root {
+  --baseline: 8px;
+  --space-1: calc(var(--baseline) * 1);
+  --space-2: calc(var(--baseline) * 2);
+  --space-3: calc(var(--baseline) * 3);
+  --space-4: calc(var(--baseline) * 4);
+  --space-5: calc(var(--baseline) * 5);
+  --space-6: calc(var(--baseline) * 6);
+  --gutter: var(--space-2);
+}
+
+/* Typography */
+:root {
+  /* Font stacks for different typography pairs */
+  --font-body-default: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-default: 'Playfair Display', Georgia, serif;
+  
+  --font-body-secondary: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-secondary: 'DM Serif Display', Georgia, serif;
+  
+  --font-body-tertiary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-tertiary: 'Fraunces', Georgia, serif;
+  
+  --font-body-quaternary: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-quaternary: 'Montserrat', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  
+  --font-body-quinary: 'EB Garamond', 'Noto Serif', 'Crimson Pro', Georgia, serif;
+  --font-heading-quinary: 'EB Garamond', 'Noto Serif', 'Crimson Pro', Georgia, serif;
+  
+  --font-body-senary: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-senary: 'Cormorant Garamond', Georgia, serif;
+  
+  --font-body-septenary: 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-septenary: 'Marcellus', Georgia, serif;
+  
+  --font-body-octonary: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-octonary: 'DM Serif Display', Georgia, serif;
+  
+  /* Additional popular pairings for specific use cases */
+  /* Tech/Startup */
+  --font-body-nonary: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-nonary: 'Poppins', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  
+  /* Editorial/Publishing */
+  --font-body-denary: 'Merriweather', Georgia, serif;
+  --font-heading-denary: 'Lora', Georgia, serif;
+  
+  /* Modern Creative */
+  --font-body-undenary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading-undenary: 'Syne', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  
+  /* Luxury/Fashion */
+  --font-body-duodenary: 'Cormorant Garamond', Georgia, serif;
+  --font-heading-duodenary: 'Tenor Sans', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  
+  /* Current active font pair (default) */
+  --font-body: var(--font-body-default);
+  --font-heading: var(--font-heading-default);
+
+  --font-size-sm: 0.875rem; /* ~14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 3rem;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.75;
+
+  --max-text-width: 65ch;
+  
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-loose: 0.02em;
+  --letter-spacing-airy: 0.04em;
+  --letter-spacing-expanded: 0.08em;
+}
+
+/* Color & Theme */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-subtle: #e0e0e0;
+  --color-primary: #0eaaaa;
+  --color-primary-rgb: 14, 170, 170; /* RGB values of primary color */
+  --color-success: #439e4f;
+  --color-warning: #f2c94c;
+  --color-error: #d34a4a;
+
+  --transition-fast: 150ms;
+  --transition-medium: 250ms;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --z-base: 0;
+  --z-nav: 10;
+  --z-modal: 100;
+}

@@ -28,20 +28,24 @@
   };
 
   // Update SVG icon based on theme
-  const updateIcon = (theme) => {
-  if (!themeIcon) return;
-
-  // Clear old icon
-  if (theme === THEME_DARK) {
-    themeIcon.innerHTML = `
-      <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414-1.414M18.364 18.364l-1.414-1.414M6.05 6.05L4.636 7.464" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="12" cy="12" r="5" fill="currentColor"/>
-    `;
-  } else {
-    themeIcon.innerHTML = `
-      <path d="M21 12.79A9 9 0 0112.21 3a7 7 0 109.79 9.79z" fill="currentColor"/>
-    `;
-  }
+   const updateIcon = (theme) => {
+    if (!themeIcon) return;
+  
+    if (theme === THEME_DARK) {
+      themeIcon.innerHTML = `
+        <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.95-7.05l-1.414 1.414M6.464 17.536l-1.414 1.414M17.536 17.536l1.414 1.414M6.464 6.464L5.05 5.05M12 8a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      `;
+    } else {
+      themeIcon.innerHTML = `
+        <path d="M21 12.79A9 9 0 1111.21 3c-.1.01-.2.02-.3.03a7 7 0 009.79 9.76z" fill="currentColor"/>
+      `;
+    }
+  
+    // Trigger animation
+    themeIcon.classList.remove('theme-icon-animate');
+    void themeIcon.offsetWidth;
+    themeIcon.classList.add('theme-icon-animate');
+  };
 
   // Trigger animation
   themeIcon.classList.remove('theme-icon-animate');
